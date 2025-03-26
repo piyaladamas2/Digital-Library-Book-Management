@@ -52,6 +52,9 @@ curl -X PUT http://localhost:8080/books/update/1 \
 Delete a Book
 curl -X DELETE http://localhost:8080/books/delete/1
 
+Deployment
+The application was successfully deployed  on Railway.
+https://digital-library-book-management-production.up.railway.app/books/
 Assumptions
 •	Book IDs are auto-generated.
 •	The availability status can be either AVAILABLE or CHECKED_OUT.
