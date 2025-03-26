@@ -51,6 +51,8 @@ curl -X PUT http://localhost:8080/api/books/1 \
      -d '{"title":"Updated Title","author":"Updated Author","genre":"Non-Fiction","availabilityStatus":"CHECKED_OUT"}'
 Delete a Book
 curl -X DELETE http://localhost:8080/api/books/1
+Exit the Application
+curl -X POST http://localhost:8080/actuator/shutdown
 Assumptions
 •	Book IDs are auto-generated.
 •	Availability status can be either AVAILABLE or CHECKED_OUT.
