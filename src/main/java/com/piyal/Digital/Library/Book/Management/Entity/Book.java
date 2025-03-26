@@ -23,13 +23,14 @@ public class Book {
   @GeneratedValue
   private long id;
 
-  @NotEmpty
+  @NotEmpty(message = "Title cannot be empty")
   private String title;
 
-  @NotEmpty
+  @NotEmpty(message = "Author cannot be empty")
   private String author;
   private String genre;
 
   @Enumerated(EnumType.STRING)
   private AvailabilityStatus availabilityStatus;
+
 }
