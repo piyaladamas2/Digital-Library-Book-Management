@@ -8,25 +8,24 @@ Features
 •	Update Book Details: Modify book details such as availability status, title, or author.
 •	Delete a Book Record: Removes a book from the catalog.
 Technologies Used
-•	Java 21
-•	Spring Boot 3.5.3
+•	Java 17
+•	Spring Boot 3.4.4
 •	Spring Data JPA
-•	H2 Database (In-memory database for testing)
-•	Maven/Gradle
+•	MySql
+•	Gradle
 •	Lombok
 •	Spring Boot Validation
 Setup Instructions
 Prerequisites
 Ensure you have the following installed:
 •	JDK 21
-•	Maven or Gradle
+•	Gradle
 •	Postman or cURL (for testing APIs)
 Clone the Repository
 git clone <repository-url>
-cd library-management-system
+cd Digital-Library-Book-Managemen
 Build and Run the Application
-Using Maven:
-mvn spring-boot:run
+
 Using Gradle:
 gradle bootRun
 API Endpoints
@@ -62,7 +61,7 @@ Challenges Faced
 Future Improvements
 •	Implement a front-end UI using React.
 •	Add user authentication and authorization.
-•	Store data in a MySQL/PostgreSQL database.
+•	Store data in a MySQL database.
 License
 This project is licensed under the MIT License.
 
