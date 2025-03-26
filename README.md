@@ -10,8 +10,6 @@ Features
 Technologies Used
 •	Java 17
 •	Spring Boot 3.4.4
-•	Spring Data JPA
-•	MySql
 •	Gradle
 •	Lombok
 •	Spring Boot Validation
@@ -34,29 +32,29 @@ Method	Endpoint	Description
 POST	/books/add	Add a new book
 GET	/books/all	Get all books
 GET	/books/{id}	Get a book by ID
-GET	/books/search	search a book by title
+GET	/books/search?title=bookName	search a book by title
 PUT	/books/update/{id}	Update book details
 DELETE /books/delete/{id}	Delete a book
 EXIT /books/exit  Exit application
 Example API Usage
 Add a Book
-curl -X POST http://localhost:8080/api/books \
+curl -X POST http://localhost:8080/books/add \
      -H "Content-Type: application/json" \
      -d '{"title":"Book Title","author":"Author Name","genre":"Fiction","availabilityStatus":"AVAILABLE"}'
 Get All Books
-curl -X GET http://localhost:8080/api/books
+curl -X GET http://localhost:8080/books/all
 Search by ID
-curl -X GET http://localhost:8080/api/books/1
+curl -X GET http://localhost:8080/books/1
 Update a Book
-curl -X PUT http://localhost:8080/api/books/1 \
+curl -X PUT http://localhost:8080/books/update/1 \
      -H "Content-Type: application/json" \
      -d '{"title":"Updated Title","author":"Updated Author","genre":"Non-Fiction","availabilityStatus":"CHECKED_OUT"}'
 Delete a Book
-curl -X DELETE http://localhost:8080/api/books/1
+curl -X DELETE http://localhost:8080/books/delete/1
 
 Assumptions
 •	Book IDs are auto-generated.
-•	Availability status can be either AVAILABLE or CHECKED_OUT.
+•	The availability status can be either AVAILABLE or CHECKED_OUT.
 •	Title and Author fields are required.
 Challenges and Improvements
 Challenges Faced
