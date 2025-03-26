@@ -40,19 +40,19 @@ DELETE /books/delete/{id}	Delete a book
 EXIT /books/exit  Exit application
 Example API Usage
 Add a Book
-curl -X POST http://localhost:8080/api/books \
+curl -X POST http://localhost:8080/books/add \
      -H "Content-Type: application/json" \
      -d '{"title":"Book Title","author":"Author Name","genre":"Fiction","availabilityStatus":"AVAILABLE"}'
 Get All Books
-curl -X GET http://localhost:8080/api/books
+curl -X GET http://localhost:8080/books/all
 Search by ID
-curl -X GET http://localhost:8080/api/books/1
+curl -X GET http://localhost:8080/books/1
 Update a Book
-curl -X PUT http://localhost:8080/api/books/1 \
+curl -X PUT http://localhost:8080/books/update/1 \
      -H "Content-Type: application/json" \
      -d '{"title":"Updated Title","author":"Updated Author","genre":"Non-Fiction","availabilityStatus":"CHECKED_OUT"}'
 Delete a Book
-curl -X DELETE http://localhost:8080/api/books/1
+curl -X DELETE http://localhost:8080/books/delete/1
 
 Assumptions
 •	Book IDs are auto-generated.
