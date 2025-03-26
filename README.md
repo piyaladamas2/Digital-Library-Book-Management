@@ -31,11 +31,13 @@ Using Gradle:
 gradle bootRun
 API Endpoints
 Method	Endpoint	Description
-POST	/api/books	Add a new book
-GET	/api/books	Get all books
-GET	/api/books/{id}	Get a book by ID
-PUT	/api/books/{id}	Update book details
-DELETE	/api/books/{id}	Delete a book
+POST	/books/add	Add a new book
+GET	/books/all	Get all books
+GET	/books/{id}	Get a book by ID
+GET	/books/search	search a book by title
+PUT	/books/update/{id}	Update book details
+DELETE /books/delete/{id}	Delete a book
+EXIT /books/exit  Exit application
 Example API Usage
 Add a Book
 curl -X POST http://localhost:8080/api/books \
@@ -51,8 +53,7 @@ curl -X PUT http://localhost:8080/api/books/1 \
      -d '{"title":"Updated Title","author":"Updated Author","genre":"Non-Fiction","availabilityStatus":"CHECKED_OUT"}'
 Delete a Book
 curl -X DELETE http://localhost:8080/api/books/1
-Exit the Application
-curl -X POST http://localhost:8080/actuator/shutdown
+
 Assumptions
 •	Book IDs are auto-generated.
 •	Availability status can be either AVAILABLE or CHECKED_OUT.
