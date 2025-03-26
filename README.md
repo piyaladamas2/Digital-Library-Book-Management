@@ -15,6 +15,7 @@ Technologies Used
 •	Gradle
 •	Lombok
 •	Spring Boot Validation
+•	Spring Boot Actuator provides a built-in /shutdown endpoint to terminate the application.
 Setup Instructions
 Prerequisites
 Ensure you have the following installed:
